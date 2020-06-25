@@ -4,8 +4,6 @@
     <PackageId>GMap.NET.WinForms</PackageId>
     <Product>GMap.NET.WindowsForms</Product>
     <AssemblyTitle>GMap.NET.WindowsForms</AssemblyTitle>
-    
-    <TargetFrameworks>net40;netcoreapp3.0</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
     <DefineConstants>ContinuesMapNo;$(DefineConstants)</DefineConstants>
     
@@ -15,6 +13,8 @@
 History Release Notes
 https://github.com/judero01col/GMap.NET/blob/master/README.md#release-notes
 </PackageReleaseNotes>
+    
+    <TargetFramework>net40</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

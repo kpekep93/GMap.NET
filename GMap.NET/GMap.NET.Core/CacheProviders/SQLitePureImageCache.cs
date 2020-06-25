@@ -180,8 +180,8 @@ namespace GMap.NET.CacheProviders
                     _connectionString =
                         string.Format("Data Source=\"{0}\";Page Size=32768;Pooling=True", _db); //;Journal Mode=Wal
 #else
-               ConnectionString =
- string.Format("Version=3,URI=file://{0},FailIfMissing=True,Page Size=32768,Pooling=True", db);
+ //               ConnectionString =
+ // string.Format("Version=3,URI=file://{0},FailIfMissing=True,Page Size=32768,Pooling=True", db);
 #endif
                 }
 
@@ -798,7 +798,7 @@ namespace GMap.NET.CacheProviders
                             {
                                 com.CommandText = _attachSqlQuery;
                                 int x = com.ExecuteNonQuery();
-                                //Debug.WriteLine("Attach: " + x);                         
+                                //Debug.WriteLine("Attach: " + x);
                             }
                         }
 

@@ -3,6 +3,7 @@
 #endif
 using System;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace GMap.NET.Internals
 {
@@ -74,7 +75,7 @@ namespace GMap.NET.Internals
         static readonly bool
             UseNativeSRWLock =
                 Stuff.IsRunningOnVistaOrLater() &&
-                IntPtr.Size == 4; // works only in 32-bit mode, any ideas on native 64-bit support? 
+                IntPtr.Size == 4; // works only in 32-bit mode, any ideas on native 64-bit support?
 
 #endif
 

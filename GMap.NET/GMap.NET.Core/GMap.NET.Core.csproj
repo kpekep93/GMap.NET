@@ -4,9 +4,7 @@
     <PackageId>GMap.NET.Core</PackageId>
     <Product>GMap.NET.Core</Product>
     <AssemblyTitle>GMap.NET.Core</AssemblyTitle>
-    <RootNamespace>GMap.NET</RootNamespace>
-
-    <TargetFrameworks>net40;netstandard2.0</TargetFrameworks>    
+    <RootNamespace>GMap.NET</RootNamespace>    
     <DefineConstants>MONO_disabled;SQLite;MySQL_disabled;PostgreSQL_disabled;$(DefineConstants)</DefineConstants>
     
     <PackageReleaseNotes>
@@ -14,10 +12,17 @@
 - Support sending X-Yours-Client header via OSMProvider (Contributed by @shrayasr)
 
 History Release Notes
-https://github.com/judero01col/GMap.NET/blob/master/README.md#release-notes</PackageReleaseNotes>    
+https://github.com/judero01col/GMap.NET/blob/master/README.md#release-notes</PackageReleaseNotes>
+    
+    <TargetFrameworks>net40;netstandard2.0</TargetFrameworks>    
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>MONO;SQLite;MySQL_disabled;PostgreSQL_disabled;TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mono.Data.Sqlite" Version="1.0.61" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.112" />
   </ItemGroup>
